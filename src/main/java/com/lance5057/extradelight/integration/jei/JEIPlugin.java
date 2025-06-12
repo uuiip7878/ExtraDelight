@@ -21,6 +21,7 @@ import com.lance5057.extradelight.integration.jei.categories.OvenRecipeCategory;
 import com.lance5057.extradelight.integration.jei.categories.ShapedWithJarRecipeCategory;
 import com.lance5057.extradelight.integration.jei.categories.ToolOnBlockRecipeCatagory;
 import com.lance5057.extradelight.integration.jei.categories.VatRecipeCategory;
+import com.lance5057.extradelight.integration.jei.transfer.MixingBowlRecipeTransferInfo;
 import com.lance5057.extradelight.modules.Fermentation;
 import com.lance5057.extradelight.workstations.chiller.ChillerMenu;
 import com.lance5057.extradelight.workstations.chiller.ChillerScreen;
@@ -216,8 +217,9 @@ public class JEIPlugin implements IModPlugin {
 				VatRecipeCategory.TYPE, 0, 6, 9, 36);
 		registration.addRecipeTransferHandler(ChillerMenu.class, ExtraDelightContainers.CHILLER_MENU.get(),
 				ChillerRecipeCategory.TYPE, 0, 6, 9, 36);
-		registration.addRecipeTransferHandler(MixingBowlMenu.class, ExtraDelightContainers.MIXING_BOWL_MENU.get(),
-				MixingBowlRecipeCategory.TYPE, 0, 6, 9, 36);
+//		registration.addRecipeTransferHandler(MixingBowlMenu.class, ExtraDelightContainers.MIXING_BOWL_MENU.get(),
+//				MixingBowlRecipeCategory.TYPE, 0, 6, 9, 36);
+		registration.addRecipeTransferHandler(new MixingBowlRecipeTransferInfo());
 	}
 
 	@Override
